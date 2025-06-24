@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/dangNhap_user">
+
+    <fragment
+        android:id="@+id/home_screen_blank"
+        android:name="com.example.doan10.home_screen_blank"
+        android:label="home_screen_fr"
+        tools:layout="@layout/home_screen_fr" >
+        <action
+            android:id="@+id/action_home_screen_blank_to_info_moto_blank"
+            app:destination="@id/info_moto_blank" />
+        <action
+            android:id="@+id/action_home_screen_blank_to_add_moto_screen"
+            app:destination="@id/add_moto_screen" />
+        <action
+            android:id="@+id/action_home_screen_blank_to_profile_user_blank"
+            app:destination="@id/profile_user_blank" />
+        <action
+            android:id="@+id/action_home_screen_blank_to_notifyScreen"
+            app:destination="@id/notifyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_moto_blank"
+        android:name="com.example.doan10.InfoMotoBlank"
+        android:label="info_moto_fr"
+        tools:layout="@layout/info_moto_fr" >
+        <action
+            android:id="@+id/action_info_moto_blank_to_home_screen_blank"
+            app:destination="@id/home_screen_blank" />
+        <argument
+            android:name="id_post"
+            app:argType="string" />
+        <argument
+            android:name="Url_img"
+            app:argType="string" />
+        <argument
+            android:name="post_soluong"
+            app:argType="integer" />
+        <argument
+            android:name="post_giaban"
+            app:argType="string" />
+        <argument
+            android:name="ghim"
+            app:argType="boolean" />
+        <argument android:name="post_tieude"
+            app:argType="string" />
+        <argument
+            android:name="post_mota"
+            app:argType="string" />
+        <argument
+            android:name="post_tinhtrang"
+            app:argType="integer" />
+        <argument android:name="post_loaixe"
+            app:argType="string" />
+        <argument android:name="post_nsx"
+            app:argType="integer" />
+        <argument
+            android:name="sdt"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_info_moto_blank_to_ghimPostMain"
+            app:destination="@id/ghimPostMain" />
+        <argument
+            android:name="nhasx"
+            app:argType="string" />
+        <argument
+            android:name="Url_img2"
+            app:argType="string" />
+        <argument
+            android:name="Url_img3"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/dangNhap_user"
+        android:name="com.example.doan10.dangNhap_user"
+        android:label="dangnhap_user_layout"
+        tools:layout="@layout/dangnhap_user_layout" >
+        <action
+            android:id="@+id/action_dangNhap_user_to_dangKy_user_blank"
+            app:destination="@id/dangKy_user_blank" />
+        <action
+            android:id="@+id/action_dangNhap_user_to_home_screen_blank"
+            app:destination="@id/home_screen_blank" />
+        <action
+            android:id="@+id/action_dangNhap_user_to_quen_mk_bank"
+            app:destination="@id/quen_mk_bank" />
+        <action
+            android:id="@+id/action_dangNhap_user_to_xem_lai_bai_dang_blank"
+            app:destination="@id/xem_lai_bai_dang_blank" />
+        <action
+            android:id="@+id/action_dangNhap_user_to_add_moto_screen"
+            app:destination="@id/add_moto_screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/dangKy_user_blank"
+        android:name="com.example.doan10.dangKy_user_blank"
+        android:label="dang_ky_user_layout"
+        tools:layout="@layout/dang_ky_user_layout" >
+        <action
+            android:id="@+id/action_dangKy_user_blank_to_quen_mk_bank"
+            app:destination="@id/quen_mk_bank" />
+        <action
+            android:id="@+id/action_dangKy_user_blank_to_dangNhap_user"
+            app:destination="@id/dangNhap_user" />
+        <action
+            android:id="@+id/action_dangKy_user_blank_to_quen_mk_bank2"
+            app:destination="@id/quen_mk_bank" />
+    </fragment>
+    <fragment
+        android:id="@+id/quen_mk_bank"
+        android:name="com.example.doan10.quen_mk_blank"
+        android:label="quen_mk_layout"
+        tools:layout="@layout/quen_mk_layout" >
+        <action
+            android:id="@+id/action_quen_mk_bank_to_dangNhap_user"
+            app:destination="@id/dangNhap_user" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_user_blank"
+        android:name="com.example.doan10.profile_user_blank"
+        android:label="fragment_profile_user_blank"
+        tools:layout="@layout/profile_user_layout" >
+        <action
+            android:id="@+id/action_profile_user_blank_to_dangNhap_user"
+            app:destination="@id/dangNhap_user" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_moto_screen"
+        android:name="com.example.doan10.addMoto_user_blank"
+        android:label="fragment_add_moto_screen"
+        tools:layout="@layout/add_moto_layput" >
+        <action
+            android:id="@+id/action_add_moto_screen_to_home_screen_blank"
+            app:destination="@id/home_screen_blank" />
+        <argument
+            android:name="user_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/notifyScreen"
+        android:name="com.example.doan10.notifyScreen"
+        android:label="notify_screen_layout"
+        tools:layout="@layout/notify_screen_layout" />
+    <fragment
+        android:id="@+id/ghimPostMain"
+        android:name="com.example.doan10.ghimPostMain"
+        android:label="ghim_post_layout"
+        tools:layout="@layout/ghim_post_layout" >
+        <action
+            android:id="@+id/action_ghimPostMain_to_info_moto_blank"
+            app:destination="@id/info_moto_blank" />
+    </fragment>
+    <fragment
+        android:id="@+id/xem_lai_bai_dang_blank"
+        android:name="com.example.doan10.xem_lai_bai_dang_blank"
+        android:label="fragment_xem_lai_bai_dang_blank"
+        tools:layout="@layout/xem_lai_bai_dang_layout" >
+        <argument
+            android:name="id_user"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_xem_lai_bai_dang_blank_to_sua_bai_danng_blank"
+            app:destination="@id/sua_bai_danng_blank" />
+        <action
+            android:id="@+id/action_xem_lai_bai_dang_blank_to_info_moto_blank"
+            app:destination="@id/info_moto_blank" />
+    </fragment>
+    <fragment
+        android:id="@+id/doiMatKhau_blank"
+        android:name="com.example.doan10.doiMatKhau_blank"
+        android:label="doi_mat_khau_layout"
+        tools:layout="@layout/doi_mat_khau_layout" />
+    <fragment
+        android:id="@+id/sua_bai_danng_blank"
+        android:name="com.example.doan10.sua_bai_dang_blank"
+        android:label="fragment_sua_bai_danng_blank"
+        tools:layout="@layout/sua_bai_dang_layout" >
+        <argument
+            android:name="postKey"
+            app:argType="string" />
+    </fragment>
+</navigation>
